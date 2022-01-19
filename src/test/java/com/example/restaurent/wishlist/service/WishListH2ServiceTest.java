@@ -1,7 +1,5 @@
 package com.example.restaurent.wishlist.service;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import com.example.restaurent.wishlist.entity.WishListEntity;
 import com.example.restaurent.wishlist.h2.WishListH2Repository;
 import org.junit.jupiter.api.Test;

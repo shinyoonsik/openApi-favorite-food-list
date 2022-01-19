@@ -1,13 +1,13 @@
 package com.example.restaurent.wishlist.entity;
 
-import com.example.restaurent.db.MemoryDbEntity;
+import com.example.restaurent.db_local_test.MemoryDbEntity;
 import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -19,10 +19,11 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class WishListEntity extends MemoryDbEntity {
-
+@Table(name = "wishlist")
+//public class WishListEntity extends MemoryDbEntity {
+public class WishListEntity {
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   private String title;           // 음식명, 장소명
@@ -36,3 +37,5 @@ public class WishListEntity extends MemoryDbEntity {
   private LocalDateTime lastVisitDate;
 
 }
+
+
